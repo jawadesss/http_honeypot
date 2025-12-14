@@ -1,0 +1,12 @@
+
+2025-12-14T13:42:03.788364 | IP=172.17.0.1 | POST / | Attack=None | Severity=info | Reason=Benign request | Query= | Body={"email": "asdfasf@asdfsdf", "password": "asdfsdaf"} | UA=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2025-12-14T13:42:09.800927 | IP=172.17.0.1 | GET / | Attack=None | Severity=info | Reason=Benign request | Query= | Body={} | UA=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2025-12-14T13:42:09.841658 | IP=172.17.0.1 | GET /assets/css/style-with-prefix.css | Attack=None | Severity=info | Reason=Benign request | Query= | Body={} | UA=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2025-12-14T13:42:09.936705 | IP=172.17.0.1 | GET /images/cover.png | Attack=None | Severity=info | Reason=Benign request | Query= | Body={} | UA=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2025-12-14T13:42:16.463109 | IP=172.17.0.1 | POST / | Attack=None | Severity=info | Reason=Benign request | Query= | Body={"email": "asdf@asfd", "password": "adsf"} | UA=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2025-12-14T15:00:42.844430 | IP=172.17.0.1 | POST / | Attack=None | Severity=info | Reason=Benign request | Query= | Body={"email": "admin' OR '1'='1", "password": "anything"} | UA=curl/8.5.0
+2025-12-14T15:03:05.140882 | IP=172.17.0.1 | POST / | Attack=None | Severity=info | Reason=Benign request | Query= | Body={"email": "admin' OR '1'='1", "password": "anything"} | UA=curl/8.5.0
+2025-12-14T15:03:49.325267 | IP=172.17.0.1 | POST / | Attack=SQL Injection | Severity=high | Reason=SQL grammar detected (1 patterns) | Query= | Body={"email": "' UNION SELECT null,null-- ", "password": "x"} | UA=curl/8.5.0
+2025-12-14T15:04:06.259458 | IP=172.17.0.1 | POST / | Attack=SQL Injection | Severity=high | Reason=SQL grammar detected (1 patterns) | Query= | Body={"email": "admin' OR SLEEP(5)-- ", "password": "x"} | UA=curl/8.5.0
+2025-12-14T15:04:41.758438 | IP=172.17.0.1 | GET / | Attack=XSS | Severity=high | Reason=Client-side script execution attempt | Query=q=%3Csvg%20onload=alert(1)%3E | Body={} | UA=curl/8.5.0
+2025-12-14T15:05:10.548318 | IP=172.17.0.1 | POST / | Attack=Command Injection | Severity=high | Reason=Shell execution syntax detected | Query= | Body={"email": "test;ls", "password": "x"} | UA=curl/8.5.0
